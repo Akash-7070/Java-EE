@@ -1,0 +1,11 @@
+
+Assignment: It is a program of Servlet1->Servlet2
+
+in your servlet1,
+Retrieve the loc from dept table.
+store these loc's in ArrayList
+
+store ArrayList inside request attribute and forward the request to servlet2.
+
+in servlet2
+retrieve  the ArrayList from request attribute and display the contents of that ArrayList.
