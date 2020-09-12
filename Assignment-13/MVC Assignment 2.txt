@@ -1,0 +1,18 @@
+Login.jsp  - form
+LoginServ [ doGet method ]    - Controller
+LoginBean     - Model
+	boolean validate(String login,String pass);
+Success.jsp     - View
+Fail.jsp        - View
+
+welcome page - Login.jsp
+
+this will accept login name and password. On submit control will go to "LoginServ" which will pass login name and password to "LoginBean".
+"LoginBean" will check login name and password if they are correct , it will return "true" or else "false".
+if LoginBean returns "true" LoginServ will store "Loginname" inside request attribute and forward the request to "Success.jsp" which will retrieve "Loginname" from request attribute and display "welcome <Loginname>" message, 
+
+if LoginBean returns "false" , LoginServ will forward the request to 
+"Fail.jsp" which will have a message "Sorry Login failed, please retry" and a link for "Login.jsp".
+
+
+
