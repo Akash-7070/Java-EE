@@ -1,0 +1,24 @@
+1) create an entity "Product" with
+	int pid  [id]
+	String pname
+	int qty
+	int price
+
+Home.jsp  (should be the welcome page)
+inside "Home.jsp",
+
+two links
+
+	add product
+	view product
+
+when user clicks on "add product", control goes to "Add.jsp" which will accept 
+	product name , price and quantity
+on click of "submit" , control goes to 	"AddServlet" which will use hibernate to persist the "Product" class instance inside database.
+Now servlet will forward the request to "Home.jsp"
+
+when user clicks on "view product", control goes to "ViewServlet" which will use hibernate to retrieve all the records from Product table.
+servlet will get List which contains all the objects ( HQL )
+store it inside request attribute and then forward request to "View.jsp".
+View.jsp will display all the objects using jstl and el.
+also in "View.jsp", there should be a link "go home" on click of which control should go back to "Home.jsp"
