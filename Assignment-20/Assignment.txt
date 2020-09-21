@@ -1,0 +1,31 @@
+4)create two entities "Course" and "Module"
+
+Module
+	id [auto generated]
+	name
+	
+
+Course
+	id [auto generated]
+	name
+	Set<Module> set;  // one to many
+
+create a "Form.jsp"
+	which will accept
+
+Enter Course name:  
+	Module_1:
+	Module_2:
+	Module_3:
+
+		save
+
+on click of "save" it should go to "CourseServ" which will create objects of "Course and Module". Add Module objects in Set and associate it with "Course" object. Finally it has to persist Course inside database using hibernate.
+
+create "ShowServ",which will query database for getting Course objects.store them in ArrayList. add ArrayList inside "request" scope and forward to "Del.jsp". 
+Del.jsp will retrieve all the objects from request scope , and show their name along with hyperlink "delete". if we click delete, control should go to "DelServ" which will delete that particular Course.
+
+inside Del.jsp give hyperlink as
+
+	<a href="Delserv? id=${var.id}"> delete</a>
+
